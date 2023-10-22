@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BodyMassIndex</string>
+
+
     <string name="Introduction">Calculate your body mass index</string>
     <string name="Weight">weight</string>
     <string name="Height">Height</string>
     <string name="Men">men</string>
     <string name="ButtonCalculte">Calculate</string>
     <string name="Women">women</string>
+
+
+    <!-- Error strings-->
+    <string name="ErrorWeight">The field weight is empty</string>
+    <string name="ErrorHeight">The filed height is empty </string>
+    <string name="ErrorSex">Select the sex</string>
+    <string name="ErrorData">Calculate the body mass index</string>
+
+    <!--Dialog strings-->
+    <string name="DialogTitle">Your body mass index is: %s</string>
+    <string name="DialogMsg">For more information see the relative table (Button in the bottom right corner)</string>
+    <string name="DialogButtonPositive">new bmi</string>
+    <string name="DialogButtonNegative">back</string>
+
 </resources>
