@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">BodyMassIndex</string>
 
+
+
+    <string name="Introduction">Calcola il tuo indice di massa corporea</string>
+    <string name="Weight">Peso</string>
+    <string name="Height">Altezza</string>
+    <string name="Men">uomo</string>
+    <string name="Women">donna</string>
+
+    <string name="ButtonCalculte">Calcola</string>
 </resources>
