@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BodyMassIndex</string>
+    <string name="Introduction">Calculate your body mass index</string>
+    <string name="Weight">weight</string>
+    <string name="Height">Height</string>
+    <string name="Men">men</string>
+    <string name="ButtonCalculte">Calculate</string>
+    <string name="Women">women</string>
+</resources>
