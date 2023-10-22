@@ -7,4 +7,7 @@
     <string name="Men">men</string>
     <string name="ButtonCalculte">Calculate</string>
     <string name="Women">women</string>
+    <string name="ErrorWeight">The field weight is empty</string>
+    <string name="ErrorHeight">The filed height is empty</string>
+    <string name="ErrorSex">"Select the sex "</string>
 </resources>
