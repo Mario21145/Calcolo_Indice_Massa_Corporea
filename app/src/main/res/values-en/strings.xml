@@ -15,7 +15,7 @@
     <string name="ErrorWeight">The field weight is empty</string>
     <string name="ErrorHeight">The filed height is empty </string>
     <string name="ErrorSex">Select the sex</string>
-    <string name="ErrorData">Calculate the body mass index</string>
+    <string name="ErrorData">First calculate the body mass index</string>
 
     <!--Dialog strings-->
     <string name="DialogTitle">Your body mass index is: %s</string>
