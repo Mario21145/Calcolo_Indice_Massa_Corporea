@@ -2,12 +2,26 @@
     <string name="app_name">BodyMassIndex</string>
 
 
-
+    <!--    placeholders and intro-->
     <string name="Introduction">Calcola il tuo indice di massa corporea</string>
     <string name="Weight">Peso</string>
     <string name="Height">Altezza</string>
     <string name="Men">uomo</string>
     <string name="Women">donna</string>
-
     <string name="ButtonCalculte">Calcola</string>
+
+
+    <!-- Error strings-->
+    <string name="ErrorWeight">Il campo peso è vuoto </string>
+    <string name="ErrorHeight">Il campo altezza è vuoto </string>
+    <string name="ErrorSex">Selezionare il sesso</string>
+    <string name="ErrorData">Prima calcola l\'indice di massa corporea </string>
+
+    <!--Dialog strings-->
+    <string name="DialogTitle">Il tuo indice di massa corporea è: %s</string>
+    <string name="DialogMsg">Per maggiori informazioni consultare la tabella relativa(Bottone in basso a destra)</string>
+    <string name="DialogButtonPositive">nuovo bmi</string>
+    <string name="DialogButtonNegative">indietro</string>
+
+
 </resources>

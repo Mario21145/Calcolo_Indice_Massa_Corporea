@@ -1,161 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.bodymassindex.viewModel.BmiViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/icon_bmi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toTopOf="@+id/Intro"
-        app:layout_constraintEnd_toEndOf="@+id/Intro"
-        app:layout_constraintStart_toStartOf="@+id/Intro"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/icons8_bmi_64" />
+        <ImageView
+            android:id="@+id/icon_bmi"
+            android:layout_width="47dp"
+            android:layout_height="46dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/LiveBmi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/LiveBmi"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/icons8_bmi_64" />
 
-    <ImageView
-        android:id="@+id/icon_Sex"
-        android:layout_width="49dp"
-        android:layout_height="48dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="@+id/Weight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Weight"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/icons8_peso_64__1_" />
-
-    <TextView
-        android:id="@+id/Intro"
-        android:layout_width="393dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="108dp"
-        android:text="@string/Introduction"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/icon_Sex"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/Weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Weight"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/icons8_peso_64__1_" />
 
 
-    <TextView
-        android:id="@+id/LiveBmi"
-        android:layout_width="76dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="32dp"
-        android:text="XX.XX"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Intro" />
-
-    <EditText
-        android:id="@+id/Weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="@string/Weight"
-        android:textStyle="bold"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LiveBmi" />
-
-
-    <ImageView
-        android:id="@+id/icon_height"
-        android:layout_width="49dp"
-        android:layout_height="48dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="@+id/Height"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Height"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/icons8_altezza_64" />
-
-    <EditText
-        android:id="@+id/Height"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="@string/Height"
-        android:textStyle="bold"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.731"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Weight" />
-
-    <ImageView
-        android:id="@+id/icon_sex"
-        android:layout_width="49dp"
-        android:layout_height="48dp"
-        android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="@+id/Sex"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Sex"
-        app:layout_constraintVertical_bias="0.451"
-        app:srcCompat="@drawable/icons8_sesso_50" />
-
-    <RadioGroup
-        android:id="@+id/Sex"
-        android:layout_width="173dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.701"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Height">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Men"
+        <TextView
+            android:id="@+id/Intro"
+            android:layout_width="393dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/Introduction"
             android:textAlignment="center"
-            android:textStyle="bold" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Women"
+        <TextView
+            android:id="@+id/LiveBmi"
+            android:layout_width="204dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="76dp"
+            android:text="@{viewModel.liveBmi.toString()}"
             android:textAlignment="center"
-            android:textStyle="bold" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="@string/ButtonCalculte"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Sex" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.71"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Intro" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:hint="@string/Weight"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.731"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LiveBmi" />
+
+        <ImageView
+            android:id="@+id/icon_height"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/Height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Height"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/icons8_altezza_64" />
+
+        <EditText
+            android:id="@+id/Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:hint="@string/Height"
+            android:textStyle="bold"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.731"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Weight" />
+
+        <ImageView
+            android:id="@+id/icon_sex"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@+id/Sex"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.154"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Sex"
+            app:layout_constraintVertical_bias="0.451"
+            app:srcCompat="@drawable/icons8_sesso_50" />
+
+        <RadioGroup
+            android:id="@+id/Sex"
+            android:layout_width="210dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="44dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.731"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Height">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Men"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Women"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/CalculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="@string/ButtonCalculte"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sex" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/icons8_grafico_64" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
