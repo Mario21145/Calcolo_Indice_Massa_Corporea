@@ -12,6 +12,10 @@ import androidx.databinding.DataBindingUtil
 import com.example.bodymassindex.databinding.ActivityMainBinding
 import com.example.bodymassindex.viewModel.BmiViewModel
 import android.content.Context
+import android.content.res.ColorStateList
+import android.content.res.Configuration
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,15 +30,26 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = bmiViewModel
         binding.lifecycleOwner = this
 
-        lateinit var weight : String
-        lateinit var height : String
+        val isDarkTheme = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
+
+        if (isDarkTheme) {
+            binding.iconBmi.setImageResource(R.drawable.icons8bmi64)
+            binding.iconWeight.setImageResource(R.drawable.icons8peso64)
+            binding.iconHeight.setImageResource(R.drawable.icons8altezza64)
+            binding.iconSex.setImageResource(R.drawable.icons8sesso50)
+        } else {
+            binding.iconBmi.setImageResource(R.drawable.icons8_bmi_64)
+            binding.iconWeight.setImageResource(R.drawable.icons8_peso_64)
+            binding.iconHeight.setImageResource(R.drawable.icons8_altezza_64)
+            binding.iconSex.setImageResource(R.drawable.icons8_sesso_50)
+            binding.women.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.colorRadio))
+            binding.men.buttonTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.colorRadio))
+            binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.colorFba))
+
+        }
 
         val radioGroup = binding.Sex
         val elements = binding.Sex.childCount
-
-        weight = ""
-        height = ""
-
 
         binding.Weight.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {

@@ -2,4 +2,25 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorFba">#FF4081</color>
+    <color name="colorRadio">#FF4081</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorText">#000000</color>
+
+
+    <!--    <resources>-->
+    <!--        <color name="colorPrimary">#64B5F6</color>-->
+    <!--        <color name="colorPrimaryDark">#1976D2</color>-->
+    <!--        <color name="colorAccent">#FF4081</color>-->
+    <!--        <color name="colorBackground">#121212</color>-->
+    <!--        <color name="colorText">#FFFFFF</color>-->
+    <!--    </resources>-->
+
+
 </resources>
