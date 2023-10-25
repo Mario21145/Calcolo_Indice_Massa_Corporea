@@ -22,7 +22,7 @@
             android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/LiveBmi"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintHorizontal_bias="0.164"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/LiveBmi"
             app:layout_constraintVertical_bias="1.0"
@@ -35,16 +35,17 @@
             android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/Weight"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintHorizontal_bias="0.164"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/Weight"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/icons8_peso_64" />
 
         <TextView
             android:id="@+id/Intro"
             android:layout_width="716dp"
             android:layout_height="50dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="40dp"
             android:text="@string/Introduction"
             android:textAlignment="center"
             android:textSize="30sp"
@@ -57,13 +58,12 @@
             android:id="@+id/LiveBmi"
             android:layout_width="359dp"
             android:layout_height="52dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="96dp"
             android:text="@{viewModel.liveBmi.toString()}"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.787"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Intro" />
 
@@ -79,7 +79,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.779"
+            app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/LiveBmi" />
 
@@ -90,17 +90,16 @@
             android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/Height"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintHorizontal_bias="0.164"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/Height"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/icons8_altezza_64" />
 
         <EditText
             android:id="@+id/Height"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="56dp"
             android:ems="10"
             android:hint="@string/Height"
             android:inputType="numberDecimal"
@@ -108,7 +107,6 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.779"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Weight" />
 
@@ -119,10 +117,10 @@
             android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="@+id/Sex"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintHorizontal_bias="0.164"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/Sex"
-            app:layout_constraintVertical_bias="0.533"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/icons8_sesso_50" />
 
         <RadioGroup
@@ -131,7 +129,6 @@
             android:layout_height="123dp"
             android:layout_marginTop="68dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.645"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Height">
 
@@ -159,12 +156,12 @@
             android:id="@+id/CalculateButton"
             android:layout_width="215dp"
             android:layout_height="68dp"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="48dp"
             android:text="@string/ButtonCalculte"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Sex" />
 
@@ -176,7 +173,7 @@
             android:layout_alignParentBottom="true"
             android:layout_margin="20dp"
 
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="32dp"
             app:layout_constraintBottom_toBottomOf="@+id/CalculateButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/CalculateButton"
