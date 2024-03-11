@@ -1,3 +1,1 @@
-﻿# Calcolo_Indice_Massa_Corporea
-
- Application that calculate the bmi
+Welcome, health enthusiasts! Take control of your well-being with BMICheck, your convenient and stylish BMI calculator built with Kotlin.
